@@ -1,0 +1,19 @@
+<div *ngIf="hero">
+    <h2>Adding new hero: {{hero.name | uppercase}}</h2>
+    <div>
+        <label for="hero-id">Hero id: </label>
+        <input id="hero-id" [(ngModel)]="hero.id" placeholder="id">
+
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+
+    <button type="button" (click)="onAdd()">
+        Add
+    </button>
+
+
+    <button type="button" (click)="onBack()">
+        Back
+    </button>
+</div>
